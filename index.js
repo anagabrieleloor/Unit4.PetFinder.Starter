@@ -30,14 +30,14 @@ app.get('/api/v1/pets', (req, res) => {
 
 // get pet by owner with query string
 // app.get('/api/v1/pets/owner/:owner', function (req, res) {
-    app.get('/api/v1/pets/owner/:owner', (req, res) => {
+    app.get('/api/v1/pets/owner', (req, res) => {
     // get the owner from the request
     // console.log("owner: " + req.query.owner);
-    const {owner} = req.params;
+    const { owner } = req.query;
   
 
     // find the pet in the pets array
-    const pet = pets.find(pet => pet.owner === owner);
+    const pet = pets.filter(pet => pet.owner === owner);
     // send the pet as a response
 //     res.send("owner: " + req.query.owner);
 // });
