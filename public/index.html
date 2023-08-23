@@ -15,8 +15,8 @@
         const ul = document.querySelector('ul')
          //GET array of pets 
         fetch('http://localhost:8089/api/v1/pets')
-        .then(response => response.json())
-        .then(pets => {
+        .then((response) => response.json())
+        .then((pets) => {
             //loop through the array of students
             pets.forEach(pet => {
                 //create a new li element
